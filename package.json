@@ -1,0 +1,49 @@
+{
+    "name": "mason",
+    "private": true,
+    "author": "rayraegah <rayraegah@gmail.com>",
+    "license": "GPL-3.0",
+    "main": "src/index.html",
+    "repository": "github:rayraegah/mason",
+    "scripts": {
+        "make": "parcel build ./src/index.html -d dist --no-source-maps",
+        "build": "npm run clean:cache && npm run clean:dist && npm run make",
+        "serve": "parcel ./src/index.html",
+        "clean:cache": "rm -rf .cache",
+        "clean:dist": "rm -rf dist",
+        "deploy": "gh-pages -d dist"
+    },
+    "babel": {
+        "presets": [
+            "@babel/react",
+            "@babel/env",
+            "@babel/preset-flow"
+        ],
+        "plugins": [
+            "@babel/plugin-proposal-class-properties"
+        ]
+    },
+    "dependencies": {
+        "cssbeautify": "^0.3.1",
+        "lodash.chunk": "^4.2.0",
+        "lodash.flatten": "^4.4.0",
+        "lodash.range": "^3.2.0",
+        "lodash.uniq": "^4.5.0",
+        "param-case": "^2.1.1",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "react-redux": "^7.1.0",
+        "recompose": "^0.30.0",
+        "redux": "^4.0.4",
+        "styled-components": "^4.3.2"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.5.4",
+        "@babel/plugin-proposal-class-properties": "^7.5.0",
+        "@babel/preset-env": "^7.5.4",
+        "@babel/preset-flow": "^7.0.0",
+        "@babel/preset-react": "^7.0.0",
+        "gh-pages": "^2.0.1",
+        "parcel": "^1.12.3"
+    }
+}
