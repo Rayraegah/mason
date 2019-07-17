@@ -6,12 +6,12 @@
     "main": "src/index.html",
     "repository": "github:rayraegah/mason",
     "scripts": {
-        "make": "parcel build ./src/index.html -d dist --no-source-maps",
+        "make": "parcel build ./src/index.html -d dist --no-source-maps --public-url /mason/",
         "build": "npm run clean:cache && npm run clean:dist && npm run make",
         "serve": "parcel ./src/index.html",
         "clean:cache": "rm -rf .cache",
         "clean:dist": "rm -rf dist",
-        "deploy": "gh-pages -d dist"
+        "deploy": "npm run build && gh-pages -d dist"
     },
     "babel": {
         "presets": [
