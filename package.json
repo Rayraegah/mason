@@ -44,6 +44,6 @@
         "@babel/preset-flow": "^7.0.0",
         "@babel/preset-react": "^7.0.0",
         "gh-pages": "^2.0.1",
-        "parcel": "^1.12.3"
+        "parcel": "^2.8.0"
     }
 }
